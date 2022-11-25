@@ -1,6 +1,12 @@
 @extends('layouts.default')
 
 @section('content')
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <div class="orders">
         <div class="row">
             <div class="col-12">
@@ -26,11 +32,11 @@
                                 <tbody>
                                     @forelse ($items as $item)
                                         <tr>
-                                            <td>{{ $item -> id }}</td>
-                                            <td>{{ $item -> name }}</td>
-                                            <td>{{ $item -> type }}</td>
-                                            <td>{{ $item -> price }}</td>
-                                            <td>{{ $item -> quantity }}</td>
+                                            <td>{{ $item->id }}</td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>{{ $item->type }}</td>
+                                            <td>{{ $item->price }}</td>
+                                            <td>{{ $item->quantity }}</td>
                                             <td>
                                                 {{-- <a href="{{ route('products.gallery') }}" class="btn btn-info btn-sm"> --}}
                                                 <a href="#" class="btn btn-info btn-sm">
