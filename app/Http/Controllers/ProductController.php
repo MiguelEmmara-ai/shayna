@@ -46,7 +46,7 @@ class ProductController extends Controller
 
         Product::create($data);
 
-        return redirect()->route('products.index')->with('success', "Success Adding Product [$item->name]");
+        return redirect()->route('products.index')->with('success', "Success Adding Product [$request->name]");
 
     }
 
