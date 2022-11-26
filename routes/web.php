@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index'])
-     ->name('dashboard');
+Route::controller(DashboardController::class)->group(function () {
+     Route::get('/', [DashboardController::class, 'index'])
+          ->name('dashboard');
+     Route::get('/logout', [DashboardController::class, 'logout']);
+});
 
 Auth::routes(['register' => false]);
 
@@ -30,5 +33,5 @@ Route::resource('product-galleries', ProductGalleryController::class);
 
 
 Route::get('transactions/{id}/set-status', [TransactionController::class, 'setStatus'])
-    ->name('transactions.status');
+     ->name('transactions.status');
 Route::resource('transactions', TransactionController::class);
