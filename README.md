@@ -29,7 +29,7 @@ applications using PHP Laravel Framework, Vue JS as the front end, building and 
 [Shayna-Backend.MiguelEmmara.Me](https://shayna-backend.miguelemmara.me/)
 
 # Screenshots
-![Screenshot 1](https://github.com/MiguelEmmara-ai/shayna/screenshots/screencapture-index-html-2022-11-26-16_39_11.png)
+![Screenshot 1](https://github.com/MiguelEmmara-ai/shayna/blob/dev/screenshots/screencapture-index-html-2022-11-26-16_39_11.png)
 
 
 ## License
